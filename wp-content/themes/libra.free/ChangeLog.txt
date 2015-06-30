@@ -1,0 +1,81 @@
+------------------ VER 1.5.1 - Released: 02-03-2015 ---------------
+Added: Support to WP 4.1
+
+UPDATED
+
+ChangeLog.txt
+style.css
+core/templates/admin/panel/premium.php
+languages/*.*
+
+------------------ VER 1.5.0 - Released: 10-22-2014 ---------------
+Added: Support to WP 4.0
+
+UPDATED
+
+ChangeLog.txt
+Purchase-Now.url
+style.css
+core/templates/admin/panel/header.php
+core/templates/admin/panel/premium.php
+languages/*.*
+
+------------------ VER 1.4.1 - Released: 02-07-2014 ---------------
+Fixed: Various Bugs
+
+UPDATED:
+style.css
+
+------------------ VER 1.4.0 - Released: 01-08-2014 ---------------
+Added: support to WP 3.8
+
+UPDATED:
+ChangeLog.txt
+style.css
+core/assets/css/metaboxes.css
+core/assets/css/panel.css
+core/lib/yit/Type/Types/Selecticon.php
+core/yit/CPT_Unlimited.php
+core/yit/Services.php
+core/yit/Testimonial.php
+
+------------------ VER 1.3.2 ---------------
+Fixed: Language files supported also in the child theme
+
+UPDATED:
+theme/tr.php
+ChangeLog.txt
+core/load.php
+core/yit/Dashboard.php
+images/dismiss.png
+theme/config.php
+
+------------------ VER 1.3.1 ---------------
+Added: support with Wordpress 3.6 RC2
+Fixed: Last tweets widget, error on multiple lines
+
+------------------ VER 1.3.0 ---------------
+Added: global options for Twitter API
+Updated: Twitter widget and shortcode now work with new API
+
+------------------ VER 1.2.0 ---------------
+Added: Show/Hide updates notification
+Fixed: show tags in single post
+Fixed: Services sidebar
+Fixed: widget almost categories
+Fixed: trackbacks and pingbacks wrong displaying
+Fixed: Google analytics and custom scripts do not print <script> tag
+Fixed: Services position with sidebar enabled
+Fixed: reset query in the testimonials slider shortcode
+Fixed: Upload images button did not work with WP 3.5
+
+------------------ VER 1.1.0 ---------------
+- Added: russian language
+- Fixed: problems with theme cache system
+- Fixed: bug with spinner in theme options admin
+- Fixed: removed empty strings translations
+- Fixed: tabs loading in the theme
+- Fixed: improved theme options
+
+------------------ VER 1.0.0 ---------------
+Initial Release
