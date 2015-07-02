@@ -1,5 +1,5 @@
 <?php
-if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https") $_SERVER["HTTPS"] = "on";
+//if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https") $_SERVER["HTTPS"] = "on";
 /**
  * The base configurations of the WordPress.
  *
@@ -70,8 +70,8 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
+//$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
+//$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
 
 /* That's all, stop editing! Happy blogging. */
 
