@@ -20,7 +20,7 @@
 define('DB_NAME', 'heroku_a5fa9d8093cfe62');
 
 /** MySQL database username */
-define('DB_USER', 'bb20f3dfa49229'));
+define('DB_USER', 'bb20f3dfa49229');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'f971a526');
