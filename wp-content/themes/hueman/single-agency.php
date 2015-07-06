@@ -6,9 +6,6 @@
 	});
 </script>
 
-
-
-
 <section class="content">
 	
 	<?php get_template_part('inc/page-title'); ?>
@@ -20,6 +17,15 @@
 			<h1 class="post-title"><?php the_title(); ?></h1>
 			<p class="post-byline"><?php _e('by','hueman'); ?> <?php the_author_posts_link(); ?> &middot; <?php the_time(get_option('date_format')); ?></p>
 			<h2><?php echo get_post_meta($post->ID,'Cost',true); ?></h2>
+		    <div class="propFeatures">
+		        <ul id="detailFeatures">
+		            <li><?php echo get_post_meta($post->ID,"Bedrooms",true); ?> <img src="http://harcourts.co.nz/Images/Icons/bedroom.gif" alt="" /></li>
+		            <li><?php echo get_post_meta($post->ID,"Bathrooms",true); ?> <img src="http://harcourts.co.nz/Images/Icons/bathroom.gif" alt="" /></li>
+		            <li><?php echo get_post_meta($post->ID,"Total lounges",true); ?> <img src="http://harcourts.co.nz/Images/Icons/lounge.gif" alt="" /></li>
+		            <li><?php echo get_post_meta($post->ID,"Dining Room",true); ?> <img src="http://harcourts.co.nz/Images/Icons/dining.gif" alt="" /></li>
+		            <li><?php echo get_post_meta($post->ID,"Garage car spaces",true); ?> <img src="http://harcourts.co.nz/Images/Icons/garage.gif" alt="" /></li>
+		        </ul>
+		    </div>
 			<div class="entry">
 			    <div class="entry-inner">
 					<?php if(get_post_meta($post->ID,"キャッチ",true)){ ?>
@@ -52,7 +58,7 @@
 							</div>
 							 
 							<div id="tabs-2">
-		                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d197.21605680109846!2d175.2420454239396!3d-37.73242377537451!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sus!4v1435920967545" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		                        <iframe src="<?php echo get_post_meta($post->ID,'In the Area',true); ?>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 							</div>
 							 
 							<div id="tabs-3">
@@ -83,8 +89,8 @@
 									</div>
 									<div style="overflow: hidden; position: absolute; width:500px; height: 350px; top: 13px; left: 13px; margin:0px; padding:0px;">
 									<video id="videoPlayer" class="video-js vjs-default-skin" controls width="500" height="350" data-setup='{"example_option":true}'>
-										<source src="http://ap-realestate.s3.amazonaws.com/video/549151.webm" type="video/webm" />
-										<source src="http://ap-realestate.s3.amazonaws.com/video/549151.mp4" type="video/mp4" />
+										<!--<source src="http://ap-realestate.s3.amazonaws.com/video/549151.webm" type="video/webm" />-->
+										<source src="<?php echo get_post_meta($post->ID,'Virtual Tour',true); ?>" type="video/mp4" />
 									</video>
 									</div>
 								</div>

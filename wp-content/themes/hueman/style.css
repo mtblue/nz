@@ -1535,3 +1535,8 @@ div#category_tab ul.tabnavi { display:table; table-layout: fixed; width:98%; mar
 div#category_tab ul.tabnavi li { display:table-cell; text-align:center; }
 div#category_tab ul.tabnavi li a { color:#ffffff; display:block; background:#333333; margin:5% 0% 0% 0%; padding:3%; }
 
+/* ------------------------------------------------------------------------- *
+ *  Add listingDetail
+/* ------------------------------------------------------------------------- */
+.propFeatures { margin: 5px 0px; }
+.propFeatures li { float: left; margin:5px; font-family: 'Arial',Helvetica,sans-serif; font-weight: bold; }
