@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-07 07:48:05+0000\n"
+"PO-Revision-Date: 2015-07-01 00:31:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,15 +10,19 @@ msgstr ""
 "X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Development\n"
 
-#: views/notice.php:109
+#: views/notice.php:94
+msgid "Your API key is no longer valid. Please enter a new key or contact support@akismet.com."
+msgstr "API キーの有効期限が切れています。新しいキーを入力するか、support@akismet.com へご連絡ください。"
+
+#: views/notice.php:113
 msgid "To continue your service, <a href=\"%s\" target=\"_blank\">upgrade to an Enterprise subscription</a>, which covers an unlimited number of sites."
 msgstr "サービスを引き続き使うには、無制限のサイトで使える <a href=\"%s\" target=\"_blank\">Enterprise プランへアップグレードしてください</a>。"
 
-#: views/notice.php:102
+#: views/notice.php:106
 msgid "Your Pro subscription allows the use of Akismet on only one site. Please <a href=\"%s\" target=\"_blank\">purchase additional Pro subscriptions</a> or upgrade to an Enterprise subscription that allows the use of Akismet on unlimited sites."
 msgstr "あなたの Pro プランは1サイトのみで利用可能です。<a href=\"%s\" target=\"_blank\">追加の Pro プランを購入する</a>か、無制限のサイトで Akismet を利用できる Enterprise プランへアップグレードしてください。"
 
-#: views/notice.php:81 views/notice.php:104 views/notice.php:111
+#: views/notice.php:81 views/notice.php:108 views/notice.php:115
 msgid "Please <a href=\"%s\" target=\"_blank\">contact our support team</a> with any questions."
 msgstr "質問があれば<a href=\"%s\" target=\"_blank\">サポートチーム</a>へ連絡してください。"
 
@@ -74,11 +78,11 @@ msgstr "%s はこのコメントをスパムとして報告しました。"
 msgid "This comment was reported as spam."
 msgstr "このコメントはスパムとして報告されました。"
 
-#: views/notice.php:94
+#: views/notice.php:98
 msgid "The key you entered could not be verified."
 msgstr "入力されたキーを認証できませんでした。"
 
-#: views/notice.php:95
+#: views/notice.php:99
 msgid "The connection to akismet.com cannot be established. Please refer to <a href=\"%s\" target=\"_blank\">our guide about firewalls</a> and check your server configuration."
 msgstr "akismet.com への接続が確立できませんでした。<a href=\"%s\" target=\"_blank\">ファイアウォールについてのガイドs</a>を参照して、サーバの設定を確認してください。"
 
@@ -123,7 +127,7 @@ msgstr "何百万もの利用実績がある Akismet は<strong>あなたのブ�
 msgid "http://akismet.com/"
 msgstr "http://akismet.com/"
 
-#: class.akismet-admin.php:782
+#: class.akismet-admin.php:785
 msgid "Please check your <a href=\"%s\">Akismet configuration</a> and contact your web host if problems persist."
 msgstr "<a href=\"%s\">Akismet の設定</a>を確認して、問題が継続するようであればウェブホストにご確認ください。"
 
@@ -207,11 +211,11 @@ msgstr "コメント"
 msgid "Your subscription is missing."
 msgstr "サブスクリプションがありません。"
 
-#: views/notice.php:100
+#: views/notice.php:104
 msgid "You&#8217;re using your Akismet key on more sites than your Pro subscription allows."
 msgstr "Pro サブスクリプションに含まれる数よりも多いサイトで Akismet キーを使用しています。"
 
-#: views/notice.php:107
+#: views/notice.php:111
 msgid "You&#8217;re using Akismet on far too many sites for your Pro subscription."
 msgstr "Pro サブスクリプションに含まれる数をかなり超えたサイトで Akismet キーを使用しています。"
 
@@ -482,19 +486,19 @@ msgstr "ステータス"
 msgid "There&#8217;s nothing in your <a href='%s'>spam queue</a> at the moment."
 msgstr "現在<a href='%1$s'>保留中のスパム</a>はありません。"
 
-#: class.akismet-admin.php:869
+#: class.akismet-admin.php:880
 msgid "Cleaning up spam takes time."
 msgstr "スパムの除去には時間がかかります。"
 
-#: class.akismet-admin.php:872
+#: class.akismet-admin.php:883
 msgid "Since you joined us, Akismet has saved you %s days!"
 msgstr "ご利用開始以来、Akismet は%s日におよぶ時間を節約しました。"
 
-#: class.akismet-admin.php:874
+#: class.akismet-admin.php:885
 msgid "Since you joined us, Akismet has saved you %d hours!"
 msgstr "ご利用開始以来、Akismet は%d時間を節約しました。"
 
-#: class.akismet-admin.php:876
+#: class.akismet-admin.php:887
 msgid "Since you joined us, Akismet has saved you %d minutes!"
 msgstr "ご利用開始以来、Akismet は%d分の時間を節約しました。"
 
@@ -640,10 +644,10 @@ msgstr "Akismet は自動再試行中にこのコメントを破棄しました�
 msgid "View comment history"
 msgstr "コメント履歴を表示"
 
-#. #-#-#-#-#  akismet.pot (Akismet 3.1.2a1)  #-#-#-#-#
+#. #-#-#-#-#  akismet.pot (Akismet 3.1.3a1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:76 class.akismet-admin.php:78
-#: class.akismet-admin.php:839 views/config.php:3
+#: class.akismet-admin.php:842 views/config.php:3
 msgid "Akismet"
 msgstr "Akismet"
 

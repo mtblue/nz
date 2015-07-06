@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: http://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.0.6
+Version: 1.0.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -96,7 +96,7 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 	cursor: pointer;
 }
 
@@ -153,6 +153,8 @@ input, textarea, select {
 #logo {
 	float: left;
 	margin-top: 0.3em;
+	max-width: 100%;
+	height: auto;
 }
 #logo .site-title {
 	float: left;
@@ -577,7 +579,7 @@ input, textarea, select {
 }
 .more-link:hover, .more-link:active {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 	text-decoration: none;
 }
 .content-full .entry .more-link {
@@ -627,7 +629,7 @@ input, textarea, select {
 }
 .post-pagination a:hover {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 	text-decoration: none;
 }
 .post-pagination .current {
@@ -898,7 +900,7 @@ embed, iframe, object, video {
 }
 #image-nav .nav-previous a:hover, #image-nav .nav-next a:hover {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 }
 
 
@@ -1185,7 +1187,7 @@ embed, iframe, object, video {
 }
 .comment-pagination a:hover {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 	text-decoration: none;
 }
 .comment-pagination .alignleft {
@@ -1235,7 +1237,7 @@ embed, iframe, object, video {
 }
 #commentform #submit:hover {
 	background: #fdfdfd;
-	border: 1px soild #ccc;
+	border: 1px solid #ccc;
 	cursor: pointer;
 	text-decoration: none;
 }

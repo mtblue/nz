@@ -2,6 +2,17 @@
 Courage Changelog
 ===================================
 
+Version 1.0.8
+-----------------------------------
+[fixed] spelling mistake in style.css
+[fixed] footer navigation menu toggle
+
+Version 1.0.7
+-----------------------------------
+[moved] featured content settings to post slider section in Customizer
+[added] number of posts setting for the Featured Post Slider
+[added] active_callback parameter to display slider controls only when slider is activated
+
 Version 1.0.6
 -----------------------------------
 [changed] navigation.js to use our new developed responsiveMenu function

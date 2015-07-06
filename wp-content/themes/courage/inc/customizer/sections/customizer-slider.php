@@ -12,7 +12,6 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'courage_section_slider', array(
         'title'    => __( 'Post Slider', 'courage' ),
-		'description' => __( 'The slideshow displays your featured posts, which you can configure on the "Featured Content" section above.', 'courage' ),
         'priority' => 50,
 		'panel' => 'courage_options_panel' 
 		)
@@ -65,7 +64,44 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 3
 		)
 	);
+	
+	// Select Featured Posts
+	$wp_customize->add_setting( 'courage_theme_options[featured_posts_header]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Courage_Customize_Header_Control(
+        $wp_customize, 'courage_control_featured_posts_header', array(
+            'label' => __( 'Select Featured Posts', 'courage' ),
+            'section' => 'courage_section_slider',
+            'settings' => 'courage_theme_options[featured_posts_header]',
+            'priority' => 4,
+			'active_callback' => 'courage_slider_activated_callback'
+            )
+        )
+    );
+	$wp_customize->add_setting( 'courage_theme_options[featured_posts_description]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Courage_Customize_Description_Control(
+        $wp_customize, 'courage_control_featured_posts_description', array(
+			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'courage' ),
+            'section' => 'courage_section_slider',
+            'settings' => 'courage_theme_options[featured_posts_description]',
+            'priority' => 5,
+			'active_callback' => 'courage_slider_activated_callback'
+            )
+        )
+    );
 
+	// Add Slider Animation Setting
 	$wp_customize->add_setting( 'courage_theme_options[slider_animation]', array(
         'default'           => 'horizontal',
 		'type'           	=> 'option',
@@ -78,7 +114,8 @@ function courage_customize_register_slider_settings( $wp_customize ) {
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_animation]',
         'type'     => 'radio',
-		'priority' => 4,
+		'priority' => 9,
+		'active_callback' => 'courage_slider_activated_callback',
         'choices'  => array(
             'horizontal' => __( 'Horizontal Slider', 'courage' ),
             'fade' => __( 'Fade Slider', 'courage' )

@@ -1527,3 +1527,11 @@ body.ie8,
 .ie8 .page-image-text .description i,
 .ie8 .flex-direction-nav a { background: url(img/ie/opacity-70.png); }
 .ie8 .entry .gallery .gallery-caption { background: url(img/ie/opacity-80-light.png); }
+
+/* ------------------------------------------------------------------------- *
+ *  Add tabs
+/* ------------------------------------------------------------------------- */
+div#category_tab ul.tabnavi { display:table; table-layout: fixed; width:98%; margin:0% 0% 5% 0%; }
+div#category_tab ul.tabnavi li { display:table-cell; text-align:center; }
+div#category_tab ul.tabnavi li a { color:#ffffff; display:block; background:#333333; margin:5% 0% 0% 0%; padding:3%; }
+

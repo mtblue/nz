@@ -6,6 +6,44 @@
 	// Use a child theme instead of placing custom functions here
 	// http://codex.wordpress.org/Child_Themes
 
+/* ------------------------------------------------------------------------- *
+ *  不動産管理の追加
+/* ------------------------------------------------------------------------- */
+
+add_action( 'init', 'create_post_type2' );
+function create_post_type2() {
+    register_post_type( 'agency', /* post-type */
+        array(
+            'labels' => array(
+                'name' => __( '不動産管理' ),
+                'singular_name' => __( 'agency' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' =>6,
+            'supports' => array(
+                'title',
+                'thumbnail',
+                'revisions',
+                'page-attributes'
+            ),
+            'taxonomies' => array('agencyinfo'),
+            'rewrite' => true,
+        )
+    );
+}
+
+/* ------------------------------------------------------------------------- *
+ *  addTabScripts
+/* ------------------------------------------------------------------------- */
+
+function addTabScripts() {
+ if (!is_admin()) {
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('jquery-ui-tabs', array('jquery'), '3.0.3');
+ }
+}
+add_action('wp_print_scripts', 'addTabScripts');
 
 /* ------------------------------------------------------------------------- *
  *  OptionTree framework integration: Use in theme mode

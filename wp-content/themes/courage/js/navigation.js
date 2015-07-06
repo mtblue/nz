@@ -112,6 +112,12 @@
 			maxWidth: "60em"
 		});
 		
+		/* Add footer navigation toggle effect */
+		$('#footernav-icon').on('click', function(){
+			$('#footernav-menu').slideToggle();
+			$(this).toggleClass('active');
+		});
+		
 	} );
 
 }(jQuery));
