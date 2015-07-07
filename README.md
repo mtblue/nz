@@ -32,6 +32,14 @@ To watch some training videos, visit http://www.youtube.com/user/c9ide
 
 ## Memo
 
+サイトの機能イメージは、
+http://www.eastwind.co.nz/index.php
+
+デザイン的には、
+http://harcourts.co.nz/
+http://www.realestate.co.nz/
+
 http://harcourts.co.nz/Property/732141/RU5330/4-Woodridge-Drive
 [2015/07/02 12:13:27] boss: このページそのまま持ってこれます？
 もちろん、昨日話していたようにシステム機能は無くて良いし、全然変わっても構わない。
+
