@@ -1,9 +1,48 @@
 <?php get_header(); ?>
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/hueman/js/jquery.aw-showcase.js"></script>
 <script type="text/javascript">
 	jQuery(function() {
 		jQuery("#category_tab").tabs({selected :0 , fx: {opacity: "toggle" , duration: "fast"}});
 	});
+	
+$(document).ready(function()
+{
+	$("#showcase").awShowcase(
+	{
+		content_width:			506,
+		content_height:			340,
+		fit_to_parent:			false,
+		auto:					true,
+		interval:				5000,
+		continuous:				false,
+		loading:				true,
+		tooltip_width:			200,
+		tooltip_icon_width:		32,
+		tooltip_icon_height:	32,
+		tooltip_offsetx:		18,
+		tooltip_offsety:		0,
+		arrows:					false,
+		buttons:				true,
+		btn_numbers:			false,
+		keybord_keys:			true,
+		mousetrace:				false, /* Trace x and y coordinates for the mouse */
+		pauseonover:			true,
+		stoponclick:			true,
+		transition:				'vslide', /* hslide/vslide/fade */
+		transition_delay:		300,
+		transition_speed:		500,
+		show_caption:			'onhover', /* onload/onhover/show */
+		thumbnails:				true,
+		thumbnails_position:	'outside-last', /* outside-last/outside-first/inside-last/inside-first */
+		thumbnails_direction:	'vertical', /* vertical/horizontal */
+		thumbnails_slidex:		0, /* 0 = auto / 1 = slide one thumbnail / 2 = slide two thumbnails / etc. */
+		dynamic_height:			false, /* For dynamic height to work in webkit you need to set the width and height of images in the source. Usually works to only set the dimension of the first slide in the showcase. */
+		speed_change:			true, /* Set to true to prevent users from swithing more then one slide at once. */
+		viewline:				false /* If set to true content_width, thumbnails, transition and dynamic_height will be disabled. As for dynamic height you need to set the width and height of images in the source. */
+	});
+});
 </script>
 
 <section class="content">
@@ -32,15 +71,6 @@
 						<h3><?php echo get_post_meta($post->ID,"キャッチ",true); ?></h3>
 					<?php } ?>
 					<div id="product_image">
-						<!--
-						<?php echo wp_get_attachment_image(get_post_meta($post->ID,"Image1",true),array(500,500)); ?>
-						<?php echo wp_get_attachment_image(get_post_meta($post->ID,"Image2",true),array(500,500)); ?>
-						<?php echo wp_get_attachment_image(get_post_meta($post->ID,"Image3",true),array(500,500)); ?>
-						<?php echo wp_get_attachment_image(get_post_meta($post->ID,"Image4",true),array(500,500)); ?>
-						<?php echo wp_get_attachment_image(get_post_meta($post->ID,"Image5",true),array(500,500)); ?>
-						-->
-										
-					
 						<div id="category_tab">
 							<ul class="tabnavi">
 							<li><a href="#tabs-1"><span>Photos</span></a></li>
@@ -48,13 +78,22 @@
 							<li><a href="#tabs-3"><span>Virtual Tour</span></a></li>
 							</ul>
 							<div id="tabs-1">
-								<?php for ($i = 1; $i <= 5; $i++): ?>
-									<?php $imgsrc1 = wp_get_attachment_image_src(get_post_meta($post->ID,"Image${i}",true),thumbnail,false); ?>
-									<?php $imgsrc2 = wp_get_attachment_image_src(get_post_meta($post->ID,"Image${i}",true),full,false); ?>
-									<?php if (get_post_meta($post->ID,"Image${i}",true)) : ?>
-										<a href="<?php echo $imgsrc2[0]; ?>" data-rel="lightbox-0"><img src="<?php echo $imgsrc1[0]; ?>" width="125" height="125" border="0" /></a></li>
-									<?php endif; ?>
-								<?php endfor; ?>
+								<div style="width: 648px; margin: auto;">
+									<div id="showcase" class="showcase">
+										<?php for ($i = 1; $i <= 5; $i++): ?>
+										<?php $imgsrc1 = wp_get_attachment_image_src(get_post_meta($post->ID,"Image${i}",true),thumbnail,false); ?>
+										<?php $imgsrc2 = wp_get_attachment_image_src(get_post_meta($post->ID,"Image${i}",true),full,false); ?>
+											<div class="showcase-slide">
+												<div class="showcase-content">
+													<a href="<?php echo $imgsrc2[0]; ?>" data-rel="lightbox-0"><img src="<?php echo $imgsrc2[0]; ?>" width="506px" border="0" /></a>
+												</div>
+												<div class="showcase-thumbnail">
+													<img src="<?php echo $imgsrc1[0]; ?>" width="140px" border="0" />
+												</div>
+											</div>
+										<?php endfor; ?>
+									</div>
+								</div>
 							</div>
 							 
 							<div id="tabs-2">

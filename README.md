@@ -40,6 +40,7 @@ http://harcourts.co.nz/
 http://www.realestate.co.nz/
 
 http://harcourts.co.nz/Property/732141/RU5330/4-Woodridge-Drive
+
 [2015/07/02 12:13:27] boss: このページそのまま持ってこれます？
 もちろん、昨日話していたようにシステム機能は無くて良いし、全然変わっても構わない。
 
