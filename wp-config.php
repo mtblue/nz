@@ -1,5 +1,5 @@
 <?php
-if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https") $_SERVER["HTTPS"] = "on";
+//if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https") $_SERVER["HTTPS"] = "on";
 /**
  * The base configurations of the WordPress.
  *
@@ -14,26 +14,19 @@ if (isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROT
  *
  * @package WordPress
  */
-
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'c9');
-
+define('DB_NAME', 'heroku_839de14558f58ac');
 /** MySQL database username */
-define('DB_USER', getenv('C9_USER'));
-
+define('DB_USER', 'b5a7daa9de5f27');
 /** MySQL database password */
-define('DB_PASSWORD', '');
-
+define('DB_PASSWORD', '72e01e25');
 /** MySQL hostname */
-define('DB_HOST', getenv('IP'));
-
+define('DB_HOST', 'us-cdbr-iron-east-02.cleardb.net');
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
-
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
@@ -43,17 +36,15 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'put your unique phrase here');
-define('SECURE_AUTH_KEY',  'put your unique phrase here');
-define('LOGGED_IN_KEY',    'put your unique phrase here');
-define('NONCE_KEY',        'put your unique phrase here');
-define('AUTH_SALT',        'put your unique phrase here');
-define('SECURE_AUTH_SALT', 'put your unique phrase here');
-define('LOGGED_IN_SALT',   'put your unique phrase here');
-define('NONCE_SALT',       'put your unique phrase here');
-
+define('AUTH_KEY',         'fatH#I-I9m#qt_O+%[WuqJFG;|sT+Ca9)Y3R?-{jH;Gc2R9 ~Wk`}uFQUuU9#A8<');
+define('SECURE_AUTH_KEY',  ':DNRCiv{=PL8af!]o+xl.b[:O2F((wc:ch[?w*YVB/c1o(37yc]u].a5Zemna|r8');
+define('LOGGED_IN_KEY',    '$G?*pquq#H;A8|R)`a&U5qPxa^=6&cKltgFrNC!_2HV;BH}!#%Ua<Nxg?N_eQ>g*');
+define('NONCE_KEY',        'zVG:&_s~AHyW+e1Q}IS0w*o> y9,pf3ZWn:ZTq?o&va(y:gFVtDb*^c;4HP+QU++');
+define('AUTH_SALT',        'MRWDp&wt MM};11j &6yZBBzP>UE(/Md7Lw^;8BzE7A0V:x+D4`;8kNE#vt5`v8R');
+define('SECURE_AUTH_SALT', ')-$CXGp]JOuw+l@w!qHDxusL_yYY`f+}zA^*<-7QuNp-m-Vq-z/=Q-S(Aje!W*O:');
+define('LOGGED_IN_SALT',   'y]1.J8cZ)}wsG w|]zLsy^C$&r^}^.Tp~j{F= Tpv>qUb*$/95}evK;HiIj~#zh/');
+define('NONCE_SALT',       '(3|&dRm+}/iIQn<`mtbjk7xPc2=2bn69<Jt:FpN-4(x4Qz4&`3+_}XSrN#)mj>6 ');
 /**#@-*/
-
 /**
  * WordPress Database Table prefix.
  *
@@ -61,7 +52,6 @@ define('NONCE_SALT',       'put your unique phrase here');
  * prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'wp_';
-
 /**
  * For developers: WordPress debugging mode.
  *
@@ -70,14 +60,11 @@ $table_prefix  = 'wp_';
  * in their development environments.
  */
 define('WP_DEBUG', false);
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
-$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
-
+//$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
+//$_SERVER["HTTP_HOST"] = $_SERVER["SERVER_NAME"];
 /* That's all, stop editing! Happy blogging. */
-
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
-
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
